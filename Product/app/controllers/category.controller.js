@@ -36,7 +36,7 @@ exports.create = (req, res) => {
 
   Categories
 
-    .save(category)
+    .create(category)
 
     .then(data => {
 
