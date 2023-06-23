@@ -50,7 +50,7 @@ exports.create = (req, res) => {
 
         message:
 
-          err.message || "Some error occurred while creating the product."
+          err.message || "Some error occurred while creating the category."
 
       });
 
@@ -86,7 +86,7 @@ exports.findAll = (req, res) => {
 
         message:
 
-          err.message || "Some error occurred while retrieving products."
+          err.message || "Some error occurred while retrieving category."
 
       });
 
@@ -124,7 +124,7 @@ exports.findOne = (req, res) => {
 
         .status(500)
 
-        .send({ message: "Error retrieving Product with id=" + id });
+        .send({ message: "Error retrieving Category with id=" + id });
 
     });
 
@@ -162,7 +162,7 @@ exports.update = (req, res) => {
 
         res.status(404).send({
 
-          message: `Cannot update Product with id=${id}. Maybe Categories was not found!`
+          message: `Cannot update Category with id=${id}. Maybe Categories was not found!`
 
         });
 
@@ -174,7 +174,7 @@ exports.update = (req, res) => {
 
       res.status(500).send({
 
-        message: "Error updating Product with id=" + id
+        message: "Error updating Category with id=" + id
 
       });
 
